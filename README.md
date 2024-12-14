@@ -4,10 +4,10 @@ Proyecto CloudyBigData
 * Diego Fernández Albert
 * Gonzalo Sanchez Alonso
 ### 1 Descripcion del problema 
-
+La idea del proyecto es analizar las valoraciones de los usuarios que realizan personas sobre libros en amazon.Podemos sacar a partir de estas popularidad de libros, actividad de usuarios, gustos entre otros
 ### 2 necesidad de Cloud y BigData
 
-El Big Data es necesario por la gran cantidad de datos que manejamos, actualmente +85k películas, con posible expansión de datos a partir de otras plataformas. Al estar estructurados la búsqueda y análisis de datos se procesarán a mayor velocidad. Haciendo uso de estos datos y de métodos estadísticos se pueden hacer predicciones, a mayor cantidad de datos mayor fiabilidad del resultado. Estas predicciones hablan de los gustos y necesidades de los espectadores y de cómo van evolucionando. La evolución tiene que ver con los avances tecnológicos y culturales, lo que vemos reflejado en los datos.
+El Big Data es esencial debido a la enorme cantidad de datos que gestionamos, como las más de 3 millones de reseñas de más de 200,000 libros diferentes, con la posibilidad de ampliar estos datos mediante la integración de otras plataformas. Al estar organizados, los datos permiten una búsqueda y un análisis mucho más rápido. Mediante el uso de estos datos y técnicas estadísticas, es posible conocer los gustos de los usuarios y sus opiniones. Estas valoraciones nos permiten conocer los gustos y necesidades de los usuarios y las obras literarias mas reconocidas por usuarios. Esta evolución está relacionada con los avances literarios y culturales, que se reflejan claramente en los datos que recopilamos.
 
 ### 3 Descripicion de los datos
 
@@ -22,7 +22,7 @@ books_data.csv
 
 * Para gestionar todos los ficheros que forman nuestro proyecto, hemos utilizado GitHub.
 * Como lenguaje de programación para todos nuestros scripts, hemos utilizado Python.
-* Para procesar dichos scripts hemos utilizado Apache Spark, ya que nos permite hacer uso de una programación funcional paralela.
+* Para procesar dichos scripts hemos utilizado Apache Spark, ya que nos permite realizar tareas de análisis de grandes volúmenes de datos con procesamiento en tiempo real como por lotes.
 * Para llevar a cabo las pruebas de nuestros scripts, hemos utilizado Google Cloud como plataforma para la ejecución de dichos scripts.
 
 ### 5 Software
@@ -39,23 +39,41 @@ Lo siguiente sera introducir el siguiente comando:<br><br>
 spark-submit movies_by_country.py input.txt output
 ```
 <br>
-Espera a que finalice y mira el resultado con:  
-
-  
+Espera a que finalice y mira el resultado con:    
 ```
 ls output cat output/*
+```  
+
+#### Uso de cluster
+Para ello debemos crearlo como aprendido en los laboratorios usando la Cloud Shell:
 ```
 
+gcloud dataproc clusters create mycluster --region=europe-southwest1 \
+--master-machine-type=e2-standard-4 --master-boot-disk-size=50 \
+--worker-machine-type=e2-standard-4 --worker-boot-disk-size=50 \
+--enable-component-gateway
+```  
+Y atraves del master node:  
+```
+BUCKET=gs://BUCKET_NAME
+spark-submit wordcount.py $BUCKET/input $BUCKET/output5
+
+```
 ### 7 Evaluacion de rendimiento
 
 ### 8 Caracteristicas avanzadas
 
 * Se ha explorado la API de los DataFrames de Spark para realizar operaciones como unión de Dataframes
+* Se ha consultado la biblioteca matplotlib de python para la generacion de graficos, el codigo esta añadido en algunos scripts sin embargo no se ejecuta ya que solo funciona local, por lo que está comentado.
 
 ### 9 Conclusiones y resultados
 
+Hemos realizado un pequeño estudio sobre los libros mejor valorados para distintos propósitos.
 
+Mejorar las valoraciones medias utilizando el número de reseñas y de los libros para una valoración más precisa.
+
+Hemos aprendido a manejar grandes cantidades de datos, a desenvolvernos con el uso de spark y también a utilizar los servicios básicos de Google cloud.
 
 ### 10 Referencias 
-* Datset : https://www.kaggle.com/datasets/mohamedbakhet/amazon-books-reviews
+* Datasets : https://www.kaggle.com/datasets/mohamedbakhet/amazon-books-reviews
 
