@@ -43,7 +43,7 @@ Distintos de usuarios que han realizado reseñas, cuantas reseñas han publicado
        
 * Valoraciones.py
 
-numero de valoraciones entre los alores 0-5 y su porcentaje respecto al total de valoraciones    
+numero de valoraciones entre los valores 0-5 y su porcentaje respecto al total de valoraciones    
 
 ### 6 Uso
 #### Uso instancia local
