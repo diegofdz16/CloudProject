@@ -32,8 +32,8 @@ Los scripts son los siguientes:
 *
 *
 ### 6 Uso
-`bash
-spark-submit movies_by_country.py
+
+`spark-submit movies_by_country.py`
 
 
 ### 7 Evaluacion de rendimiento
