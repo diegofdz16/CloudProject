@@ -33,9 +33,9 @@ Los scripts son los siguientes:
 *
 ### 6 Uso
 * Uso instancia local
-  Para ellos debemos iniciar una instancia de VM , instalar PySpark e imporat el script que nos interese.
-  Lo siguiente sera introducir el siguiente comando:
-```spark-submit movies_by_country.py                                                                                     ```
+Para ellos debemos iniciar una instancia de VM , instalar PySpark e imporat el script que nos interese.
+Lo siguiente sera introducir el siguiente comando:
+```spark-submit movies_by_country.py                                                         ```
 
 
 ### 7 Evaluacion de rendimiento
