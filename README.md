@@ -59,6 +59,19 @@ spark-submit script.py $BUCKET/input $BUCKET/output5
 
 ```
 ### 7 Evaluacion de rendimiento
+Dos nodos trabajadores
+anyosRatings.py->68.65s
+info.py->102.44s
+cantidad.py->77.21
+valoraciones.py->40.65
+
+Cuatro nodos trabajadores
+anyosRatings.py->70.03s
+info.py->79.09s
+cantidad.py->74.94s
+valoraciones.py->41.27s
+
+En la mayoría de las ejecuciones el cambio entre el rendimiento de 2 a 4 nodos trabajadores es prácticamente nulo, sin embargo la ejecución del script info.py si que se ve bastante mejorada, esto puede ser que debido a que al tener que generar 2 outputs tiene un trabajo mayor que el resto y la paralelización de las tareas puede ayudar a la reducción de su tiempo de ejecución por lo que sí se ha notado la diferencia en este caso.
 
 ### 8 Caracteristicas avanzadas
 
