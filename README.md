@@ -37,11 +37,10 @@ Para ello debemos iniciar una instancia de VM , instalar PySpark e imporat el sc
 Lo siguiente sera introducir el siguiente comando:<br><br>
 ```
 spark-submit movies_by_country.py input.txt output
-```<br>
+<br>
 Espera a que finalice y mira el resultado con:<br>
 ```
- ls output cat output/*
- ```
+ls output cat output/*
 
 
 ### 7 Evaluacion de rendimiento
