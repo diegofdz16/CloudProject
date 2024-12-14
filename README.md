@@ -41,7 +41,10 @@ En 4 grupos de años, el numero de libros y el porcentaje que supone el grupo re
 Numero de valoraciones de los libros referenciados y su media de valoraciones
 Distintos de usuarios que han realizado reseñas, cuantas reseñas han publicado y la media de su op      
        
-*
+* Valoraciones.py
+
+numero de valoraciones entre los alores 0-5 y su porcentaje respecto al total de valoraciones    
+
 ### 6 Uso
 #### Uso instancia local
 Para ello debemos iniciar una instancia de VM , instalar PySpark e imporat el script que nos interese.
