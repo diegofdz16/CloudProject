@@ -30,9 +30,9 @@ books_data.csv
 Los scripts son los siguientes:
 * anyosRatings.py     
 Clasifica en grupos de años la media de las valoraciones
-*cantidad.py    
+* cantidad.py    
 En 4 grupos de años, el numero de libros y el porcentaje que supone el grupo respecto al total
-*info.py   
+* info.py   
 Numero de valoraciones de los libros referenciados y su media de valoraciones
 Distintos de usuarios que han realizado reseñas, cuantas reseñas han publicado y la media de su op
 *
