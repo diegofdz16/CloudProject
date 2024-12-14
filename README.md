@@ -7,7 +7,7 @@ Proyecto CloudyBigData
 La idea del proyecto es analizar las valoraciones de los usuarios que realizan personas sobre libros en amazon.Podemos sacar a partir de estas popularidad de libros, actividad de usuarios, gustos entre otros
 ### 2 necesidad de Cloud y BigData
 
-El Big Data es esencial debido a la enorme cantidad de datos que gestionamos, como las más de 3 millones de reseñas de más de 200,000 libros diferentes, con la posibilidad de ampliar estos datos mediante la integración de otras plataformas. Al estar organizados, los datos permiten una búsqueda y un análisis mucho más rápido. Mediante el uso de estos datos y técnicas estadísticas, es posible conocer los gustos de los usuarios y sus opiniones. Estas valoraciones nos permiten conocer los gustos y necesidades de los usuarios y las obras literarias mas reconocidas por usuarios. Esta evolución está relacionada con los avances literarios y culturales, que se reflejan claramente en los datos que recopilamos.
+El Big Data es esencial debido a la enorme cantidad de datos que gestionamos, como las más de 3 millones de reseñas de más de 200,000 libros diferentes, con la posibilidad de ampliar estos datos mediante la integración de otras plataformas. Al estar organizados, los datos permiten una búsqueda y un análisis mucho más rápido. Mediante el uso de estos datos y técnicas estadísticas, es posible conocer los gustos de los usuarios y sus opiniones. Estas valoraciones nos permiten conocer  las obras literarias mas reconocidas por usuarios. Esta evolución está relacionada con los avances literarios y culturales, que se reflejan en los datos que recopilamos.
 
 ### 3 Descripicion de los datos
 
@@ -36,7 +36,7 @@ Los scripts son los siguientes:
 Para ello debemos iniciar una instancia de VM , instalar PySpark e imporat el script que nos interese.
 Lo siguiente sera introducir el siguiente comando:<br><br>
 ```
-spark-submit movies_by_country.py input.txt output
+spark-submit script.py input.txt output
 ```
 Espera a que finalice y mira el resultado con:   
 ```
@@ -55,7 +55,7 @@ gcloud dataproc clusters create mycluster --region=europe-southwest1 \
 Y atraves del master node:  
 ```
 BUCKET=gs://BUCKET_NAME
-spark-submit wordcount.py $BUCKET/input $BUCKET/output5
+spark-submit script.py $BUCKET/input $BUCKET/output5
 
 ```
 ### 7 Evaluacion de rendimiento
