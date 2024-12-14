@@ -40,7 +40,8 @@ spark-submit movies_by_country.py input.txt output
 ```
 <br>
 Espera a que finalice y mira el resultado con:  
-<br>
+
+  
 ```
 ls output cat output/*
 ```
