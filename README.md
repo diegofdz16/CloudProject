@@ -22,7 +22,7 @@ books_data.csv
 
 * Para gestionar todos los ficheros que forman nuestro proyecto, hemos utilizado GitHub.
 * Como lenguaje de programación para todos nuestros scripts, hemos utilizado Python.
-* Para procesar dichos scripts hemos utilizado Apache Spark, ya que nos permite realizar tareas de análisis de grandes volúmenes de datos con procesamiento en tiempo real como por lotes.
+* Para procesar dichos scripts hemos utilizado Spark, ya que nos permite realizar tareas de análisis de grandes volúmenes de datos con procesamiento en tiempo real como por lotes.
 * Para llevar a cabo las pruebas de nuestros scripts, hemos utilizado Google Cloud como plataforma para la ejecución de dichos scripts.
 
 ### 5 Software
